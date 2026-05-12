@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 36" width="220" height="36" role="img" aria-label="Arkansas Medical Marijuana Card">
+  <g fill="none">
+    <path d="M4 6 L20 6 L24 12 L22 22 L16 30 L8 30 L4 22 Z" fill="#033c3f"/>
+    <path d="M9 13 L19 13 L17 22 L11 22 Z" fill="#20B780"/>
+    <circle cx="14" cy="17.5" r="1.6" fill="#ffffff"/>
+  </g>
+  <text x="34" y="16" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="700" font-size="13" fill="#033c3f" letter-spacing="-0.02em">ARKANSAS</text>
+  <text x="34" y="30" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="600" font-size="11" fill="#20B780" letter-spacing="0.04em">MEDICAL CARD</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#033c3f"/>
+      <stop offset="100%" stop-color="#002124"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(80, 130)">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="22" fill="#20B780" font-weight="500" letter-spacing="6">ARKANSAS · AMENDMENT 98</text>
+    <text x="0" y="120" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-size="96" fill="#ffffff" font-weight="800" letter-spacing="-3">Your Arkansas</text>
+    <text x="0" y="220" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-style="italic" font-size="96" fill="#20B780" font-weight="800" letter-spacing="-3">Medical</text>
+    <text x="0" y="320" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-size="96" fill="#ffffff" font-weight="800" letter-spacing="-3">Marijuana Card</text>
+    <text x="0" y="400" font-family="Inter, system-ui, sans-serif" font-size="28" fill="rgba(255,255,255,0.85)" font-weight="400">Apply online. Get evaluated by Arkansas-licensed physicians.</text>
+  </g>
+  <g transform="translate(960, 480)">
+    <circle r="68" fill="#20B780"/>
+    <text y="6" text-anchor="middle" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-size="22" fill="#033c3f" font-weight="800">98%</text>
+    <text y="28" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#033c3f" font-weight="600" letter-spacing="2">APPROVED</text>
+  </g>
+</svg>

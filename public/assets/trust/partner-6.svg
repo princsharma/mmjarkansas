@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" role="img" aria-label="AR-licensed physicians">
+  <path d="M22 14 L34 22 L34 38 L22 46 L10 38 L10 22 Z" fill="none" stroke="#6b7280" stroke-width="2"/>
+  <path d="M22 24 L22 36 M16 30 L28 30" stroke="#6b7280" stroke-width="2"/>
+  <text x="46" y="28" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="700" font-size="13" fill="#6b7280">AR-LICENSED</text>
+  <text x="46" y="46" font-family="'JetBrains Mono', monospace" font-size="8" fill="#9ca3af" letter-spacing="3">PHYSICIANS</text>
+</svg>

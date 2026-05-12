@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" role="img" aria-label="Arkansas Department of Health">
+  <rect x="6" y="14" width="32" height="32" fill="none" stroke="#6b7280" stroke-width="2"/>
+  <path d="M22 18 L22 42 M10 30 L34 30" stroke="#6b7280" stroke-width="2"/>
+  <text x="48" y="28" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="700" font-size="13" fill="#6b7280" letter-spacing="1">ARKANSAS DEPT.</text>
+  <text x="48" y="46" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="700" font-size="13" fill="#6b7280" letter-spacing="1">OF HEALTH</text>
+</svg>

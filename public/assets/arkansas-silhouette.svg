@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160" role="presentation" aria-hidden="true">
+  <path d="M14 22 L186 18 L188 70 L184 132 L116 138 L92 150 L60 144 L24 138 L14 88 Z" fill="#20B780" fill-opacity="0.12" stroke="#20B780" stroke-width="1.5"/>
+  <circle cx="92" cy="84" r="3" fill="#033c3f"/>
+  <text x="100" y="88" font-family="'JetBrains Mono', monospace" font-size="8" fill="#033c3f" font-weight="500">LITTLE ROCK</text>
+</svg>
