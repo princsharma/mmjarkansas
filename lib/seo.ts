@@ -4,11 +4,11 @@ export const SITE_CONFIG = {
   name: "Arkansas Medical Marijuana Card",
   shortName: "AR MMJ Card",
   url: "https://arkansasmedicalmarijuanascard.com",
-  defaultTitle:
-    "Arkansas Medical Marijuana Card | Online Doctor Evaluations Under Amendment 98",
+  defaultTitle: "Apply Your Medical Marijuana Card Arkansas",
   defaultDescription:
-    "Apply for your Arkansas Medical Marijuana Card online with licensed Arkansas physicians. HIPAA-compliant telehealth evaluations, money-back guarantee if not approved.",
+    "Start your Arkansas medical marijuana card application online with licensed physicians, secure consultations, and fast support.",
   defaultKeywords: [
+    "Medical Marijuana Card Arkansas",
     "Arkansas medical marijuana card",
     "Arkansas MMJ card",
     "Amendment 98",
@@ -23,7 +23,7 @@ export const SITE_CONFIG = {
   twitterHandle: "@ARMedCard",
   locale: "en_US",
   phone: "1-855-AR-CARD-1",
-  email: "support@arkansasmedicalmarijuanascard.com",
+  email: "contact@medicalmarijuanacardarkansas.com",
   address: {
     locality: "Little Rock",
     region: "AR",

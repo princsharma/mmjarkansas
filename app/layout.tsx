@@ -33,7 +33,8 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const GTM_ID = "GTM-XXXXXXXX";
+const GTM_ID = "GTM-K9B3FFX8";
+const GSC_VERIFICATION = "I3qsFza2P33FgD56THhZXGuGfVVb0fOZxD3tICGJHBA";
 
 export const metadata: Metadata = buildMetadata();
 
@@ -54,6 +55,10 @@ export default function RootLayout({
       className={`${bricolage.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <head>
+        <meta
+          name="google-site-verification"
+          content={GSC_VERIFICATION}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

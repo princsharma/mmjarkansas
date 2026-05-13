@@ -20,9 +20,18 @@ import { buildMetadata, SITE_CONFIG } from "@/lib/seo";
 import { STEPS, FAQ_ITEMS } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Apply for Your Arkansas Medical Marijuana Card Online",
+  title: "Apply Your Medical Marijuana Card Arkansas",
   description:
-    "Apply for your Arkansas Medical Marijuana Card online with licensed doctors. HIPAA-secure telehealth, money-back guarantee if not approved.",
+    "Start your Arkansas medical marijuana card application online with licensed physicians, secure consultations, and fast support.",
+  keywords: [
+    "Medical Marijuana Card Arkansas",
+    "Arkansas medical marijuana card",
+    "Arkansas MMJ card",
+    "Amendment 98",
+    "Arkansas medical cannabis",
+    "online medical marijuana evaluation Arkansas",
+    "Arkansas Department of Health medical marijuana",
+  ],
   canonicalPath: "/",
 });
 
