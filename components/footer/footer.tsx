@@ -32,7 +32,7 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" aria-label={`${SITE_CONFIG.name} – home`}>
               <Image
-                src="/assets/logo.svg"
+                src="/assets/arkansas-logo.webp"
                 alt={SITE_CONFIG.name}
                 width={220}
                 height={36}

@@ -150,7 +150,10 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 relative">
+          <div
+            id="form-section"
+            className="lg:col-span-6 relative scroll-mt-24"
+          >
             <div className="absolute -right-6 lg:-right-20 -top-10 -z-0 pointer-events-none">
               <EmeraldOrb size={360} />
             </div>

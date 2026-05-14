@@ -79,7 +79,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
           className="flex items-center shrink-0"
         >
           <Image
-            src="/assets/logo.svg"
+            src="/assets/arkansas-logo.webp"
             alt={SITE_CONFIG.name}
             width={220}
             height={36}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import HeaderServer from "@/components/header/headerServer";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/landing/hero";
@@ -10,11 +11,11 @@ import Pricing from "@/components/landing/pricing";
 import Doctors from "@/components/landing/doctors";
 import Benefits from "@/components/landing/benefits";
 import Reviews from "@/components/landing/reviews";
-import FormWrapper from "@/components/landing/formwrapper";
 import Trust from "@/components/landing/trust";
 import StartJourney from "@/components/landing/startjourney";
 import FAQ from "@/components/landing/faq";
 import SpeakWithDoc from "@/components/landing/speakwithdoc";
+import EmeraldOrb from "@/components/motion/EmeraldOrb";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata, SITE_CONFIG } from "@/lib/seo";
 import { STEPS, FAQ_ITEMS } from "@/lib/content";
@@ -40,7 +41,7 @@ const medicalOrganizationLd = {
   "@type": "MedicalOrganization",
   name: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
-  logo: `${SITE_CONFIG.url}/assets/logo.svg`,
+  logo: `${SITE_CONFIG.url}/assets/arkansas-logo.webp`,
   image: `${SITE_CONFIG.url}/assets/og-homepage.svg`,
   telephone: SITE_CONFIG.phone,
   email: SITE_CONFIG.email,
@@ -207,7 +208,7 @@ export default function HomePage() {
         <Benefits />
         <Reviews />
 
-        <FormSection />
+        <GuaranteeSection />
 
         <Trust />
         <StartJourney />
@@ -220,10 +221,17 @@ export default function HomePage() {
   );
 }
 
-function FormSection() {
+const GUARANTEE_CHIPS = [
+  { label: "HIPAA · ENCRYPTED", position: "top-6 left-6" },
+  { label: "AR-LICENSED MDs", position: "top-6 right-6" },
+  { label: "100% MONEY-BACK", position: "bottom-6 left-6" },
+  { label: "98% APPROVED", position: "bottom-6 right-6" },
+];
+
+function GuaranteeSection() {
   return (
     <section
-      id="form-section"
+      id="evaluation-details"
       aria-labelledby="form-section-heading"
       className="relative"
       style={{
@@ -232,23 +240,26 @@ function FormSection() {
       }}
     >
       <div className="mx-auto max-w-[1280px] px-5 lg:px-10 py-20 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6">
+        <div className="grid gap-12 lg:grid-cols-12 items-center">
+          <div className="lg:col-span-5 space-y-6">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)]">
-              [F] BEGIN YOUR EVALUATION
+              [F] THE PATIENT GUARANTEE
             </p>
             <h2
               id="form-section-heading"
               className="heading-primary"
               style={{ color: "var(--color-heading)" }}
             >
-              Begin your evaluation. <span className="italic text-[var(--color-accent)]">It takes about 90 seconds.</span>
+              Care you can verify.{" "}
+              <span className="italic text-[var(--color-accent)]">
+                Built on the Natural State.
+              </span>
             </h2>
             <p className="text-[var(--color-muted)] leading-relaxed">
-              Share a few details and an Arkansas-licensed physician will
-              reach out within one business hour to schedule your secure
-              telehealth visit. You are only billed if your application is
-              approved — 100% money-back guarantee.
+              Every evaluation runs on a HIPAA-compliant platform, reviewed by
+              Arkansas-licensed physicians who know Amendment 98 inside out.
+              You only pay if you&apos;re approved — and a patient advocate
+              follows up directly to walk you through the ADH paperwork.
             </p>
             <div className="space-y-3 pt-2">
               {[
@@ -268,10 +279,77 @@ function FormSection() {
                 </div>
               ))}
             </div>
+            <div className="pt-4">
+              <a
+                href="#form-section"
+                className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-7 py-4 text-xs font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
+              >
+                <span className="opacity-70">[F]</span> Begin Your Evaluation
+              </a>
+            </div>
           </div>
 
-          <div className="lg:col-span-7">
-            <FormWrapper />
+          <div className="lg:col-span-7 relative isolate">
+            <div className="flex items-center justify-between gap-4 mb-4 px-1">
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#033c3f]">
+                ISSUE No. 02
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)]">
+                THE TRUST GUARANTEE
+              </span>
+            </div>
+
+            <div
+              className="relative aspect-[5/6] rounded-3xl overflow-hidden border border-white/5 shadow-[0_30px_80px_-30px_rgba(3,60,63,0.45)]"
+              style={{
+                background:
+                  "linear-gradient(160deg, #033c3f 0%, #002124 100%)",
+              }}
+            >
+              <div
+                aria-hidden="true"
+                className="absolute -right-24 -top-24 pointer-events-none"
+              >
+                <EmeraldOrb size={520} />
+              </div>
+
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 opacity-[0.06]"
+                style={{
+                  backgroundImage:
+                    "url(/assets/hero/diamond-pattern.svg)",
+                  backgroundRepeat: "repeat",
+                  backgroundSize: "80px 80px",
+                }}
+              />
+
+              <div className="absolute inset-0 flex items-center justify-center px-12">
+                <Image
+                  src="/assets/arkansas-silhouette.svg"
+                  alt=""
+                  width={440}
+                  height={440}
+                  className="opacity-90 drop-shadow-[0_20px_40px_rgba(32,183,128,0.35)]"
+                />
+              </div>
+
+              {GUARANTEE_CHIPS.map((chip) => (
+                <div
+                  key={chip.label}
+                  className={`absolute ${chip.position} inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.08] backdrop-blur-md px-3.5 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-white`}
+                >
+                  <span className="w-1 h-1 rounded-full bg-[var(--color-accent)]" />
+                  {chip.label}
+                </div>
+              ))}
+
+              <div className="absolute inset-x-6 bottom-[18%] text-center">
+                <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-[var(--color-accent)]">
+                  Amendment 98 · The Natural State
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

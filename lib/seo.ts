@@ -23,7 +23,7 @@ export const SITE_CONFIG = {
   twitterHandle: "@ARMedCard",
   locale: "en_US",
   phone: "1-855-AR-CARD-1",
-  email: "contact@medicalmarijuanacardarkansas.com",
+  email: "contact@arkansasmedicalmarijuanascard.com",
   address: {
     locality: "Little Rock",
     region: "AR",
