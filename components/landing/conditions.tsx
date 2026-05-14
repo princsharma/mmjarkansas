@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ArrowRight } from "lucide-react";
 import { AR_CONDITIONS } from "@/lib/formSchema";
 
 const CONDITIONS = AR_CONDITIONS.filter((c) => c !== "Other");
@@ -109,11 +110,26 @@ export function Conditions() {
           })}
         </div>
 
-        <p className="mt-10 max-w-[60ch] text-sm text-[var(--color-muted)] leading-relaxed">
-          Don&apos;t see your condition? Speak with one of our Arkansas-licensed
-          physicians — additional conditions may qualify under physician
-          discretion.
-        </p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-end">
+          <p className="lg:col-span-7 max-w-[60ch] text-sm text-[var(--color-muted)] leading-relaxed">
+            Don&apos;t see your condition? Speak with one of our
+            Arkansas-licensed physicians — additional conditions may qualify
+            under physician discretion.
+          </p>
+          <div className="lg:col-span-5 lg:justify-self-end">
+            <a
+              href="#form-section"
+              className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-7 py-4 text-xs font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
+              style={{
+                boxShadow: "0 20px 40px -24px rgba(32, 183, 128, 0.6)",
+              }}
+            >
+              <span className="opacity-70">[05]</span>
+              Check Your Eligibility
+              <ArrowRight size={16} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

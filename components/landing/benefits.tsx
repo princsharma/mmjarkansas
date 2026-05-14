@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ArrowRight } from "lucide-react";
 
 const BENEFITS = [
   {
@@ -116,6 +117,19 @@ export function Benefits() {
                 path to consistent treatment.
               </p>
               <div className="h-px w-16 bg-[var(--color-accent)]" />
+              <div className="pt-2">
+                <a
+                  href="#form-section"
+                  className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-7 py-4 text-xs font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
+                  style={{
+                    boxShadow: "0 20px 40px -24px rgba(32, 183, 128, 0.6)",
+                  }}
+                >
+                  <span className="opacity-70">[07]</span>
+                  Claim Your Card
+                  <ArrowRight size={16} aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
 

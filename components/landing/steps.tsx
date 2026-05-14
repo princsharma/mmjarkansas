@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ArrowRight } from "lucide-react";
 import PinnedSteps from "@/components/motion/PinnedSteps";
 import { STEPS } from "@/lib/content";
 
@@ -72,7 +73,7 @@ export function Steps() {
       </div>
 
       <PinnedSteps
-        className="relative overflow-hidden pb-24 lg:pb-32"
+        className="relative overflow-hidden pb-16 lg:pb-20"
         trackClassName="flex gap-6 px-5 lg:px-10"
       >
         {STEPS.map((step) => (
@@ -146,6 +147,23 @@ export function Steps() {
           </article>
         ))}
       </PinnedSteps>
+
+      <div className="mx-auto max-w-[1280px] px-5 lg:px-10 pb-24 lg:pb-32 flex flex-col items-center text-center gap-4">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-muted)]">
+          READY TO BEGIN?
+        </p>
+        <a
+          href="#form-section"
+          className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-8 py-4 text-sm font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
+          style={{
+            boxShadow: "0 24px 60px -28px rgba(32, 183, 128, 0.6)",
+          }}
+        >
+          <span className="opacity-70">[06]</span>
+          Start Step 01
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+      </div>
     </section>
   );
 }

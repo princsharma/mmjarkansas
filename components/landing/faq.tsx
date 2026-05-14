@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { FAQ_ITEMS } from "@/lib/content";
 
 export function FAQ() {
@@ -38,6 +38,32 @@ export function FAQ() {
               onToggle={() => setOpenIdx(openIdx === i ? null : i)}
             />
           ))}
+        </div>
+
+        <div className="mt-14 lg:mt-20 flex flex-col items-center text-center gap-4">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)]">
+            STILL ON THE FENCE?
+          </p>
+          <h3
+            className="heading-secondary max-w-[28ch]"
+            style={{ color: "var(--color-heading)" }}
+          >
+            You only pay <span className="italic text-[var(--color-accent)]">if you&apos;re approved.</span>
+          </h3>
+          <a
+            href="#form-section"
+            className="mt-2 inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-8 py-4 text-sm font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
+            style={{
+              boxShadow: "0 24px 60px -28px rgba(32, 183, 128, 0.6)",
+            }}
+          >
+            <span className="opacity-70">[08]</span>
+            Begin Your Evaluation
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+          <p className="text-xs text-[var(--color-muted)] tracking-wide">
+            90-second start · Money-back if not approved
+          </p>
         </div>
       </div>
     </section>
