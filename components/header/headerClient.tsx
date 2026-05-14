@@ -70,7 +70,6 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
     <header
       ref={headerRef}
       className="sticky top-0 z-50 bg-white border-b border-[#e5e7eb]"
-      data-cursor="hover"
     >
       <div className="mx-auto max-w-[1280px] px-5 lg:px-10 h-[72px] flex items-center gap-6">
         <Link

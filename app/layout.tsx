@@ -9,7 +9,6 @@ import "./globals.css";
 import { buildMetadata, SITE_CONFIG } from "@/lib/seo";
 import ScrollProvider from "@/components/motion/ScrollProvider";
 import ScrollProgress from "@/components/motion/ScrollProgress";
-import CustomCursor from "@/components/cursor/CustomCursor";
 import BackToTop from "@/components/backtotop";
 
 const bricolage = Bricolage_Grotesque({
@@ -80,12 +79,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        <a href="#main-content" className="skip-to-content">
-          Skip to main content
-        </a>
-
         <ScrollProvider>
-          <CustomCursor />
           <ScrollProgress />
           {children}
           <BackToTop />
