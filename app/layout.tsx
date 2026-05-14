@@ -36,17 +36,7 @@ const jetbrains = JetBrains_Mono({
 const GTM_ID = "GTM-K9B3FFX8";
 const GSC_VERIFICATION = "I3qsFza2P33FgD56THhZXGuGfVVb0fOZxD3tICGJHBA";
 
-export const metadata: Metadata = {
-  ...buildMetadata(),
-  icons: {
-    icon: [
-      { url: "/assets/arkansas-icon.webp", type: "image/webp" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    apple: "/assets/arkansas-icon.webp",
-    shortcut: "/assets/arkansas-icon.webp",
-  },
-};
+export const metadata: Metadata = buildMetadata();
 
 export const viewport: Viewport = {
   width: "device-width",

@@ -34,8 +34,8 @@ export function Footer() {
               <Image
                 src="/assets/arkansas-logo.webp"
                 alt={SITE_CONFIG.name}
-                width={220}
-                height={36}
+                width={200}
+                height={68}
               />
             </Link>
             <p className="max-w-[42ch] text-[var(--color-muted)] leading-relaxed">

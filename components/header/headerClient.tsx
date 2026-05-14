@@ -81,8 +81,8 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
           <Image
             src="/assets/arkansas-logo.webp"
             alt={SITE_CONFIG.name}
-            width={220}
-            height={36}
+            width={176}
+            height={60}
             priority
           />
         </Link>
