@@ -48,12 +48,6 @@ export const leadFormSchema = z.object({
     .string()
     .min(7, "Please enter a valid phone number.")
     .regex(phoneRegex, "Please enter a valid US phone number."),
-  county: z.enum(AR_COUNTIES, {
-    error: "Please select your Arkansas county.",
-  }),
-  qualifyingCondition: z.enum(AR_CONDITIONS, {
-    error: "Please select your qualifying condition.",
-  }),
   consent: z.literal(true, {
     error: "You must agree to the telehealth consent to continue.",
   }),
@@ -62,6 +56,12 @@ export const leadFormSchema = z.object({
 export type LeadFormValues = z.infer<typeof leadFormSchema>;
 
 export const contactFormSchema = leadFormSchema.extend({
+  county: z.enum(AR_COUNTIES, {
+    error: "Please select your Arkansas county.",
+  }),
+  qualifyingCondition: z.enum(AR_CONDITIONS, {
+    error: "Please select your qualifying condition.",
+  }),
   message: z
     .string()
     .min(10, "Please share a few words about how we can help.")

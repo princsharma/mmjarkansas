@@ -5,12 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import gsap from "gsap";
 import { ChevronRight, ShieldCheck, Loader2 } from "lucide-react";
-import {
-  AR_CONDITIONS,
-  AR_COUNTIES,
-  leadFormSchema,
-  type LeadFormValues,
-} from "@/lib/formSchema";
+import { leadFormSchema, type LeadFormValues } from "@/lib/formSchema";
 
 const STATE = {
   stateAbbr: "AR",
@@ -61,8 +56,6 @@ export function LeadForm() {
         "contact[contact_type]": "Web Form",
         "product[name]": "Eva",
         utm_source: UTM_SOURCE,
-        county: data.county,
-        qualifying_condition: data.qualifyingCondition,
       },
     };
 
@@ -137,21 +130,21 @@ export function LeadForm() {
             </h3>
           </header>
 
-          <div className="grid gap-5 sm:grid-cols-2">
-            <Field
-              label="Full Name"
-              name="fullName"
-              error={errors.fullName?.message}
-            >
-              <input
-                id="fullName"
-                autoComplete="name"
-                className="form-input"
-                aria-invalid={!!errors.fullName}
-                {...register("fullName")}
-              />
-            </Field>
+          <Field
+            label="Full Name"
+            name="fullName"
+            error={errors.fullName?.message}
+          >
+            <input
+              id="fullName"
+              autoComplete="name"
+              className="form-input"
+              aria-invalid={!!errors.fullName}
+              {...register("fullName")}
+            />
+          </Field>
 
+          <div className="grid gap-5 sm:grid-cols-2">
             <Field
               label="Email Address"
               name="email"
@@ -166,9 +159,7 @@ export function LeadForm() {
                 {...register("email")}
               />
             </Field>
-          </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
             <Field
               label="Phone Number"
               name="phone"
@@ -185,53 +176,7 @@ export function LeadForm() {
                 {...register("phone")}
               />
             </Field>
-
-            <Field
-              label="Arkansas County"
-              name="county"
-              error={errors.county?.message}
-            >
-              <select
-                id="county"
-                defaultValue=""
-                className="form-input"
-                aria-invalid={!!errors.county}
-                {...register("county")}
-              >
-                <option value="" disabled>
-                  Select your county
-                </option>
-                {AR_COUNTIES.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))}
-              </select>
-            </Field>
           </div>
-
-          <Field
-            label="Qualifying Condition"
-            name="qualifyingCondition"
-            error={errors.qualifyingCondition?.message}
-          >
-            <select
-              id="qualifyingCondition"
-              defaultValue=""
-              className="form-input"
-              aria-invalid={!!errors.qualifyingCondition}
-              {...register("qualifyingCondition")}
-            >
-              <option value="" disabled>
-                Select your condition
-              </option>
-              {AR_CONDITIONS.map((c) => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-          </Field>
 
           <div className="space-y-2">
             <label className="flex items-start gap-3 cursor-pointer text-sm text-[var(--color-body)]">
