@@ -10,6 +10,7 @@ import { buildMetadata, SITE_CONFIG } from "@/lib/seo";
 import ScrollProvider from "@/components/motion/ScrollProvider";
 import ScrollProgress from "@/components/motion/ScrollProgress";
 import BackToTop from "@/components/backtotop";
+import HashLinkHandler from "@/components/HashLinkHandler";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-sans-display",
@@ -78,6 +79,8 @@ export default function RootLayout({
             title="Google Tag Manager"
           />
         </noscript>
+
+        <HashLinkHandler />
 
         <ScrollProvider>
           <ScrollProgress />
