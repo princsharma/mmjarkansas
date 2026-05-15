@@ -62,7 +62,11 @@ export function Footer() {
       <div className="mx-auto max-w-[1280px] px-5 lg:px-10 py-16 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5 space-y-6">
-            <Link href="/" aria-label={`${SITE_CONFIG.name} – home`}>
+            <Link
+              href="/"
+              title={`${SITE_CONFIG.name} – home`}
+              aria-label={`${SITE_CONFIG.name} – home`}
+            >
               <Image
                 src="/assets/arkansas-logo.webp"
                 alt={SITE_CONFIG.name}
@@ -117,6 +121,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${SITE_CONFIG.phone.replace(/[^\d+]/g, "")}`}
+                  title={`Call ${SITE_CONFIG.name} at ${SITE_CONFIG.phone}`}
                   className="inline-flex items-center gap-3 text-[var(--color-heading)] hover:text-[var(--color-accent)] transition-colors"
                 >
                   <Phone size={15} className="text-[var(--color-accent)]" />
@@ -128,6 +133,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
+                  title={`Email ${SITE_CONFIG.name} at ${SITE_CONFIG.email}`}
                   className="inline-flex items-center gap-3 text-[var(--color-heading)] hover:text-[var(--color-accent)] transition-colors"
                 >
                   <Mail size={15} className="text-[var(--color-accent)]" />

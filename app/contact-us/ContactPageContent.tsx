@@ -54,6 +54,7 @@ export function ContactPageContent() {
               label="PHONE"
               primary={SITE_CONFIG.phone}
               href={`tel:${SITE_CONFIG.phone.replace(/[^\d+]/g, "")}`}
+              linkTitle={`Call ${SITE_CONFIG.name} at ${SITE_CONFIG.phone}`}
               footnote="Mon-Fri 8am-8pm · Sat 9am-5pm CST"
             />
             <ContactRow
@@ -61,6 +62,7 @@ export function ContactPageContent() {
               label="EMAIL"
               primary={SITE_CONFIG.email}
               href={`mailto:${SITE_CONFIG.email}`}
+              linkTitle={`Email ${SITE_CONFIG.name} at ${SITE_CONFIG.email}`}
               footnote="We respond within one business hour."
             />
             <ContactRow
@@ -91,13 +93,15 @@ type ContactRowProps = {
   label: string;
   primary: string;
   href?: string;
+  linkTitle?: string;
   footnote: string;
 };
 
-function ContactRow({ icon, label, primary, href, footnote }: ContactRowProps) {
+function ContactRow({ icon, label, primary, href, linkTitle, footnote }: ContactRowProps) {
   const PrimaryNode = href ? (
     <a
       href={href}
+      title={linkTitle}
       className="text-xl lg:text-2xl text-[var(--color-heading)] hover:text-[var(--color-accent)] transition-colors"
       style={{
         fontFamily: "var(--font-sans-display), system-ui, sans-serif",

@@ -145,6 +145,7 @@ export function SpeakWithDoc() {
             <Magnetic>
               <a
                 href={`tel:${SITE_CONFIG.phone.replace(/[^\d+]/g, "")}`}
+                title={`Call ${SITE_CONFIG.name} at ${SITE_CONFIG.phone}`}
                 className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-7 py-5 text-sm font-mono uppercase tracking-[0.2em] text-[#033c3f] hover:scale-[1.02] transition-transform font-semibold"
               >
                 <Phone size={18} />

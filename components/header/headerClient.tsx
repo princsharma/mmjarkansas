@@ -74,6 +74,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
       <div className="mx-auto max-w-[1280px] px-5 lg:px-10 h-[72px] flex items-center gap-6">
         <Link
           href="/"
+          title={`${SITE_CONFIG.name} – home`}
           aria-label={`${SITE_CONFIG.name} – home`}
           className="flex items-center shrink-0"
         >
@@ -110,6 +111,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
         <div className="ml-auto flex items-center gap-3">
           <a
             href={`tel:${SITE_CONFIG.phone.replace(/[^\d+]/g, "")}`}
+            title={`Call ${SITE_CONFIG.name} at ${SITE_CONFIG.phone}`}
             className="hidden md:inline-flex items-center gap-2 font-mono text-xs text-[var(--color-heading)] hover:text-[var(--color-accent)] tracking-[0.12em]"
           >
             <Phone size={14} aria-hidden="true" />
@@ -198,6 +200,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
             <div className="px-6 py-6 border-t border-white/10 space-y-4">
               <a
                 href={`tel:${SITE_CONFIG.phone.replace(/[^\d+]/g, "")}`}
+                title={`Call ${SITE_CONFIG.name} at ${SITE_CONFIG.phone}`}
                 className="inline-flex items-center gap-2 font-mono text-sm text-white tracking-[0.12em]"
               >
                 <Phone size={16} aria-hidden="true" />
