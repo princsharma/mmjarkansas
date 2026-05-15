@@ -29,12 +29,12 @@ export function Trust() {
       className="relative bg-white border-y border-[#e5e7eb]"
     >
       <div className="mx-auto max-w-[1280px] px-5 lg:px-10 py-16">
-        <p
+        <h2
           id="trust-heading"
           className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-muted)] text-center mb-10"
         >
           [T] TRUSTED BY ARKANSANS · SECURED BY INDUSTRY STANDARDS
-        </p>
+        </h2>
 
         <div className="relative">
           <div

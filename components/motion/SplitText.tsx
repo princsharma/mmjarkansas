@@ -88,32 +88,30 @@ export function SplitText({
       : children.split("");
 
   return (
-    <TagComponent
-      ref={ref}
-      className={className}
-      aria-label={children}
-    >
-      {tokens.map((token, i) => {
-        if (/^\s+$/.test(token)) return <span key={`s-${i}`}>{token}</span>;
-        return (
-          <span
-            key={`t-${i}`}
-            aria-hidden="true"
-            style={{
-              display: "inline-block",
-              overflow: "hidden",
-              verticalAlign: "baseline",
-            }}
-          >
+    <TagComponent ref={ref} className={className}>
+      <span className="sr-only">{children}</span>
+      <span aria-hidden="true">
+        {tokens.map((token, i) => {
+          if (/^\s+$/.test(token)) return <span key={`s-${i}`}>{token}</span>;
+          return (
             <span
-              data-split-piece=""
-              style={{ display: "inline-block", willChange: "transform" }}
+              key={`t-${i}`}
+              style={{
+                display: "inline-block",
+                overflow: "hidden",
+                verticalAlign: "baseline",
+              }}
             >
-              {token}
+              <span
+                data-split-piece=""
+                style={{ display: "inline-block", willChange: "transform" }}
+              >
+                {token}
+              </span>
             </span>
-          </span>
-        );
-      })}
+          );
+        })}
+      </span>
     </TagComponent>
   );
 }

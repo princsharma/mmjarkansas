@@ -109,6 +109,9 @@ export function Reviews() {
         </header>
 
         <article className="relative max-w-4xl mx-auto text-center px-4">
+          <h3 className="sr-only">
+            Featured review from {HERO_REVIEW.author}
+          </h3>
           <span
             aria-hidden="true"
             className="block leading-none mb-2"
@@ -137,6 +140,7 @@ export function Reviews() {
           </blockquote>
           <footer className="mt-8 space-y-2">
             <div
+              role="img"
               className="flex justify-center gap-1 text-[var(--color-accent)]"
               aria-label={`${HERO_REVIEW.stars} out of 5 stars`}
             >
@@ -176,7 +180,9 @@ export function Reviews() {
                 className="shrink-0 w-[320px] lg:w-[380px] bg-white border border-[#e5e7eb] p-7 space-y-4"
                 style={{ scrollSnapAlign: "start" }}
               >
+                <h3 className="sr-only">Review from {r.author}</h3>
                 <div
+                  role="img"
                   className="flex gap-1 text-[var(--color-accent)]"
                   aria-label={`${r.stars} out of 5 stars`}
                 >

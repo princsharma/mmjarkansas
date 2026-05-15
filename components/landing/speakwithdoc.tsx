@@ -108,6 +108,7 @@ export function SpeakWithDoc() {
 
             <div className="space-y-4">
               <div
+                role="img"
                 aria-label={SITE_CONFIG.phone}
                 className="flex items-center gap-[2px]"
                 style={{

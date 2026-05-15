@@ -84,20 +84,19 @@ export function Footer() {
             <div className="opacity-90">
               <Image
                 src="/assets/arkansas-silhouette.svg"
-                alt="Outline of the state of Arkansas"
+                alt=""
                 title="Outline of the state of Arkansas"
                 width={200}
                 height={160}
                 aria-hidden="true"
-                role="presentation"
               />
             </div>
           </div>
 
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)]">
+            <h3 className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)]">
               Quick Links
-            </h4>
+            </h3>
             <ul className="space-y-2.5">
               {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
@@ -114,9 +113,9 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)]">
+            <h3 className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)]">
               Contact
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
