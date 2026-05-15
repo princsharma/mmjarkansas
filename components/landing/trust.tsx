@@ -64,6 +64,7 @@ export function Trust() {
                   <Image
                     src={p.src}
                     alt={p.label}
+                    title={p.label}
                     width={200}
                     height={60}
                   />
@@ -79,6 +80,7 @@ export function Trust() {
                   <Image
                     src={p.src}
                     alt={p.label}
+                    title={p.label}
                     width={200}
                     height={60}
                   />

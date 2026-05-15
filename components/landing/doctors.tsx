@@ -107,6 +107,7 @@ export function Doctors() {
                   <Image
                     src={doc.image}
                     alt={`Portrait of ${doc.name}`}
+                    title={`Portrait of ${doc.name}`}
                     fill
                     sizes="(max-width: 768px) 40vw, 240px"
                     className="object-cover"

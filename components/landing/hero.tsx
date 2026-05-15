@@ -102,6 +102,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-6">
               <a
                 href="#form-section"
+                title="Jump to the Arkansas medical marijuana card application form"
                 className="group relative inline-flex items-center gap-3 font-mono text-sm uppercase tracking-[0.2em] text-[var(--color-accent)]"
               >
                 <span className="opacity-70">[02]</span>

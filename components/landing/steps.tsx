@@ -154,6 +154,7 @@ export function Steps() {
         </p>
         <a
           href="#form-section"
+          title="Start step 01 of your Arkansas medical marijuana card application"
           className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-8 py-4 text-sm font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
           style={{
             boxShadow: "0 24px 60px -28px rgba(32, 183, 128, 0.6)",

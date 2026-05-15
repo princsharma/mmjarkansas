@@ -80,6 +80,7 @@ export function StartJourney() {
             <Magnetic>
               <a
                 href="#form-section"
+                title="Apply for your Arkansas medical marijuana card"
                 className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-8 py-5 text-sm font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
                 style={{
                   boxShadow: "0 24px 60px -28px rgba(32, 183, 128, 0.65)",

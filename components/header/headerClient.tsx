@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SITE_CONFIG } from "@/lib/seo";
 
-type NavItem = { label: string; href: string; index: string };
+type NavItem = { label: string; href: string; index: string; title?: string };
 
 export function HeaderClient({ items }: { items: NavItem[] }) {
   const [open, setOpen] = useState(false);
@@ -80,6 +80,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
           <Image
             src="/assets/arkansas-logo.webp"
             alt={SITE_CONFIG.name}
+            title={SITE_CONFIG.name}
             width={176}
             height={60}
             priority
@@ -94,6 +95,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
             <Link
               key={item.href}
               href={item.href}
+              title={item.title ?? item.label}
               className="group relative text-sm font-medium text-[var(--color-heading)] hover:text-[var(--color-accent)] transition-colors"
             >
               <span className="font-mono text-[10px] text-[var(--color-muted)] mr-1 tracking-[0.2em]">
@@ -115,6 +117,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
           </a>
           <Link
             href="#form-section"
+            title="Apply for your Arkansas medical marijuana card"
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#033c3f] px-5 py-2.5 text-xs font-mono uppercase tracking-[0.18em] text-white hover:bg-[#002124] transition-colors"
           >
             <span className="opacity-70">[01]</span> Apply Now
@@ -168,6 +171,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
                 <li key={item.href} data-mobile-link>
                   <Link
                     href={item.href}
+                    title={item.title ?? item.label}
                     onClick={() => setOpen(false)}
                     className="group flex items-baseline gap-4 py-3 border-b border-white/10"
                   >
@@ -201,6 +205,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
               </a>
               <Link
                 href="#form-section"
+                title="Apply for your Arkansas medical marijuana card"
                 onClick={() => setOpen(false)}
                 className="block text-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-xs font-mono uppercase tracking-[0.2em] text-[#033c3f] font-semibold"
               >

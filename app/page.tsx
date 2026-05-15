@@ -282,6 +282,7 @@ function GuaranteeSection() {
             <div className="pt-4">
               <a
                 href="#form-section"
+                title="Begin your Arkansas medical marijuana card evaluation"
                 className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-7 py-4 text-xs font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
               >
                 <span className="opacity-70">[F]</span> Begin Your Evaluation
@@ -327,7 +328,8 @@ function GuaranteeSection() {
               <div className="absolute inset-0 flex items-center justify-center px-12">
                 <Image
                   src="/assets/arkansas-silhouette.svg"
-                  alt=""
+                  alt="Outline of the state of Arkansas"
+                  title="Outline of the state of Arkansas"
                   width={440}
                   height={440}
                   className="opacity-90 drop-shadow-[0_20px_40px_rgba(32,183,128,0.35)]"

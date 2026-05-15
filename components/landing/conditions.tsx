@@ -119,6 +119,7 @@ export function Conditions() {
           <div className="lg:col-span-5 lg:justify-self-end">
             <a
               href="#form-section"
+              title="Check your eligibility for an Arkansas medical marijuana card"
               className="inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-7 py-4 text-xs font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
               style={{
                 boxShadow: "0 20px 40px -24px rgba(32, 183, 128, 0.6)",

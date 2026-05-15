@@ -52,6 +52,7 @@ export function FAQ() {
           </h3>
           <a
             href="#form-section"
+            title="Begin your Arkansas medical marijuana card evaluation"
             className="mt-2 inline-flex items-center gap-3 rounded-full bg-[var(--color-accent)] px-8 py-4 text-sm font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
             style={{
               boxShadow: "0 24px 60px -28px rgba(32, 183, 128, 0.6)",

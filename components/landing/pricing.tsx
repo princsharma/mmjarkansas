@@ -173,6 +173,7 @@ export function Pricing() {
                   <Magnetic>
                     <a
                       href="#form-section"
+                      title="Apply for your Arkansas medical marijuana card"
                       className="inline-flex w-full items-center justify-between gap-3 rounded-full bg-[var(--color-accent)] px-6 py-4 text-sm font-mono uppercase tracking-[0.2em] text-white hover:scale-[1.02] transition-transform"
                     >
                       <span>

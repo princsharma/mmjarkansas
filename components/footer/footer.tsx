@@ -5,14 +5,46 @@ import { SITE_CONFIG } from "@/lib/seo";
 import Marquee from "@/components/motion/Marquee";
 
 const QUICK_LINKS = [
-  { label: "Apply Now", href: "#form-section" },
-  { label: "How It Works", href: "#steps" },
-  { label: "Qualifying Conditions", href: "#conditions" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Doctors", href: "#doctors" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "/contact-us" },
+  {
+    label: "Apply Now",
+    href: "#form-section",
+    title: "Apply for your Arkansas medical marijuana card",
+  },
+  {
+    label: "How It Works",
+    href: "#steps",
+    title: "See how the Arkansas medical marijuana card process works",
+  },
+  {
+    label: "Qualifying Conditions",
+    href: "#conditions",
+    title: "View Arkansas medical marijuana qualifying conditions",
+  },
+  {
+    label: "Pricing",
+    href: "#pricing",
+    title: "View Arkansas medical marijuana evaluation pricing",
+  },
+  {
+    label: "Doctors",
+    href: "#doctors",
+    title: "Meet our Arkansas-licensed physicians",
+  },
+  {
+    label: "Reviews",
+    href: "#reviews",
+    title: "Read Arkansas patient reviews",
+  },
+  {
+    label: "FAQ",
+    href: "#faq",
+    title: "Read Arkansas medical marijuana card FAQs",
+  },
+  {
+    label: "Contact",
+    href: "/contact-us",
+    title: "Contact our Arkansas patient advocates",
+  },
 ];
 
 const STATE_PRIDE_TEXT = [
@@ -34,6 +66,7 @@ export function Footer() {
               <Image
                 src="/assets/arkansas-logo.webp"
                 alt={SITE_CONFIG.name}
+                title={SITE_CONFIG.name}
                 width={200}
                 height={68}
               />
@@ -47,7 +80,8 @@ export function Footer() {
             <div className="opacity-90">
               <Image
                 src="/assets/arkansas-silhouette.svg"
-                alt=""
+                alt="Outline of the state of Arkansas"
+                title="Outline of the state of Arkansas"
                 width={200}
                 height={160}
                 aria-hidden="true"
@@ -65,6 +99,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    title={link.title}
                     className="text-sm text-[var(--color-heading)] hover:text-[var(--color-accent)] transition-colors"
                   >
                     {link.label}

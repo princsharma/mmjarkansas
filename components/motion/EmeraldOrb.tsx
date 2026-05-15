@@ -71,7 +71,8 @@ export function EmeraldOrb({
     >
       <Image
         src="/assets/hero/orb-emerald.svg"
-        alt=""
+        alt="Emerald orb background decoration"
+        title="Emerald orb background decoration"
         width={size}
         height={size}
         priority={false}
