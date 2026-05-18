@@ -27,6 +27,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
         duration: 0.7,
         ease: "expo.out",
         delay: 0.05,
+        clearProps: "transform",
       });
     },
     { scope: headerRef }
@@ -67,6 +68,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
   }, [open]);
 
   return (
+    <>
     <header
       ref={headerRef}
       className="sticky top-0 z-50 bg-white border-b border-[#e5e7eb]"
@@ -135,6 +137,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
           </button>
         </div>
       </div>
+    </header>
 
       {open && (
         <div
@@ -218,7 +221,7 @@ export function HeaderClient({ items }: { items: NavItem[] }) {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
 
