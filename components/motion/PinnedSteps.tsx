@@ -34,8 +34,8 @@ export function PinnedSteps({
       mm.add(
         {
           reduced: "(prefers-reduced-motion: reduce)",
-          full: "(prefers-reduced-motion: no-preference) and (min-width: 901px)",
-          touch: "(prefers-reduced-motion: no-preference) and (max-width: 900px)",
+          full: "(prefers-reduced-motion: no-preference) and (min-width: 1024px)",
+          touch: "(prefers-reduced-motion: no-preference) and (max-width: 1023px)",
         },
         (ctx) => {
           const reduced = ctx.conditions?.reduced;

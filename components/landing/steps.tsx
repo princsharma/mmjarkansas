@@ -73,16 +73,15 @@ export function Steps() {
       </div>
 
       <PinnedSteps
-        className="relative overflow-hidden pb-16 lg:pb-20"
-        trackClassName="flex gap-6 px-5 lg:px-10"
+        className="relative lg:overflow-hidden pb-16 lg:pb-20"
+        trackClassName="flex flex-col lg:flex-row gap-6 px-5 lg:px-10"
       >
         {STEPS.map((step) => (
           <article
             key={step.index}
             data-step-card
-            className="relative shrink-0 bg-white border border-[#e5e7eb] p-8 lg:p-10"
+            className="relative shrink-0 w-full lg:w-[min(92vw,480px)] mx-auto lg:mx-0 max-w-120 lg:max-w-none overflow-hidden bg-white border border-[#e5e7eb] p-6 sm:p-8 lg:p-10"
             style={{
-              width: "min(92vw, 480px)",
               clipPath:
                 "polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%)",
               boxShadow: "0 24px 60px -28px rgba(3, 60, 63, 0.18)",

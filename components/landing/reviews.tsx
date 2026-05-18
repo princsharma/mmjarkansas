@@ -58,17 +58,19 @@ export function Reviews() {
     if (!strip) return;
 
     const onDown = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
       setIsDragging(true);
       strip.setPointerCapture(e.pointerId);
       startX.current = e.clientX;
       scrollStart.current = strip.scrollLeft;
     };
     const onMove = (e: PointerEvent) => {
-      if (!isDragging) return;
+      if (!isDragging || e.pointerType !== "mouse") return;
       const dx = e.clientX - startX.current;
       strip.scrollLeft = scrollStart.current - dx;
     };
     const onUp = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
       setIsDragging(false);
       if (strip.hasPointerCapture(e.pointerId)) {
         strip.releasePointerCapture(e.pointerId);
@@ -92,7 +94,7 @@ export function Reviews() {
     <section
       id="reviews"
       aria-labelledby="reviews-heading"
-      className="relative bg-white"
+      className="relative bg-white overflow-x-clip"
     >
       <div className="mx-auto max-w-[1280px] px-5 lg:px-10 py-20 lg:py-28">
         <header className="max-w-[60ch] mb-14 space-y-4">
@@ -170,6 +172,8 @@ export function Reviews() {
             style={{
               scrollSnapType: "x mandatory",
               scrollbarWidth: "thin",
+              touchAction: "pan-x pan-y",
+              overscrollBehaviorX: "contain",
             }}
             role="region"
             aria-label="More patient reviews"
